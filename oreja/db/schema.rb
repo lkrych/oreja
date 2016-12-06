@@ -10,21 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206214131) do
+ActiveRecord::Schema.define(version: 20161206230039) do
 
   create_table "episodes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.text     "description"
+    t.time     "duration"
+    t.datetime "air_date"
+    t.integer  "podcast_id"
+    t.integer  "provider_id"
+    t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
+    t.index ["provider_id"], name: "index_episodes_on_provider_id"
   end
 
   create_table "podcasts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.string   "genre"
+    t.text     "summary"
+    t.integer  "episodes_id"
+    t.integer  "provider_id"
+    t.index ["episodes_id"], name: "index_podcasts_on_episodes_id"
+    t.index ["provider_id"], name: "index_podcasts_on_provider_id"
   end
 
   create_table "providers", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.text     "description"
+    t.datetime "first"
+    t.integer  "podcasts_id"
+    t.index ["podcasts_id"], name: "index_providers_on_podcasts_id"
   end
 
 end
