@@ -4,7 +4,7 @@ class CreatePodcasts < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :genre
       t.text :summary
-
+      t.integer :provider_id
       t.timestamps
     end
   end
