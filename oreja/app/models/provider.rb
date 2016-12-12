@@ -1,4 +1,4 @@
 class Provider < ApplicationRecord
-    has_many :podcasts, :dependent => destroy
+    has_many :podcasts
     
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161208223233) do
+ActiveRecord::Schema.define(version: 20161211233847) do
 
   create_table "episodes", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20161208223233) do
     t.integer  "podcast_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "image_url"
+    t.index ["podcast_id"], name: "index_episodes_on_podcast_id"
   end
 
   create_table "podcasts", force: :cascade do |t|
@@ -29,6 +31,8 @@ ActiveRecord::Schema.define(version: 20161208223233) do
     t.integer  "provider_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "image_url"
+    t.index ["provider_id"], name: "index_podcasts_on_provider_id"
   end
 
   create_table "providers", force: :cascade do |t|

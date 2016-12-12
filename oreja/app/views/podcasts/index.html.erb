@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Logo</th>
       <th>Name</th>
       <th>Genre</th>
       <th>Summary</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @podcasts.each do |podcast| %>
       <tr>
+        <td><%= image_tag(podcast.image_url) %></td>
         <td><%= podcast.name %></td>
         <td><%= podcast.genre %></td>
         <td><%= podcast.summary %></td>
