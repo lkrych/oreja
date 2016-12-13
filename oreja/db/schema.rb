@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161211233847) do
+ActiveRecord::Schema.define(version: 20161213215557) do
 
   create_table "episodes", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.time     "duration"
     t.datetime "air_date"
-    t.integer  "podcast_id"
+    t.string   "podcast_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "image_url"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20161211233847) do
     t.string   "name"
     t.string   "genre"
     t.text     "summary"
-    t.integer  "provider_id"
+    t.string   "provider_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "image_url"
