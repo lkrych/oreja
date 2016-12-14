@@ -10,7 +10,7 @@ class ProvidersController < ApplicationController
   # GET /providers/1
   # GET /providers/1.json
   def show
-    @provider = Provider.find([params[:id]])
+    @provider = Provider.find_by_name([params[:name]])
     @podcasts = @provider.podcasts
   end
 

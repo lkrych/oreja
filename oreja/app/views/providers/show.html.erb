@@ -24,7 +24,7 @@
   <tbody>
     <% @podcasts.each do |podcast| %>
       <tr>
-        <td><%= link_to(image_tag(podcast.image_url)), podcast_path(podcast) %></td>
+        <td><%= link_to(image_tag(podcast.image_url), podcast_path(podcast)) %></td>
         <td><%= podcast.name %></td>
         <td><%= podcast.genre %></td>
         <td><%= podcast.summary %></td>
