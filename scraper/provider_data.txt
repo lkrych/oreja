@@ -1,0 +1,137 @@
+'Politics', 'The latest podcast feed searching 'Politics' on SermonAudio.com.',
+'Politics', 'Our weekly podcast on political matters',
+'NPR', 'The NPR Politics Podcast is where NPR's political reporters talk to you like they talk to each other. With weekly roundups and quick takes on news of the day, you don't have to keep up with politics to know what's happening. You just have to keep up with us.',
+'FiveThirtyEight - Nate Silver, Jody Avirgan, Clare Malone, Harry Enten', 'Nate Silver and the FiveThirtyEight team cover the latest in politics, tracking the issues and "game-changers" every week.',
+'WNYC Studios and The New Yorker', 'A weekly discussion about politics, hosted by The New Yorker's executive editor, Dorothy Wickenden.',
+'HuffPost Politics', 'An inside-the-beltway show that's truly for beltway outsiders. Each week the HuffPost Politics team offers an entertaining alternative to the Sunday shows you've stopped watching. Along with their outside the beltway guests, join Arthur Delaney, Zach Carter, and Jason Linkins as they analyze the news of the week and explain why it should matter to you.',
+'Bruce Carlson', 'Today's political debates, particularly on cable news, talk radio and blog comments can be limiting.  In this podcast, Bruce Carlson applies as much history as possible to the politics of today.  ',
+'TEDTalks', 'Seeing the world beyond news headlines: politicians, journalists and researchers share their insights onstage at the TED conference, TEDx events and partner events around the world. You can also download these and many other videos free on TED.com, with an interactive English transcript and subtitles in up to 80 languages. TED is a nonprofit devoted to Ideas Worth Spreading. ',
+'The Weekly Standard', 'The Weekly Standard Podcast delivers unique analysis of the events shaping the news and the world today - from a conservative perspective. Host Michael Graham leads an all-star roster of the best conservative minds including: Bill Kristol, Fred Barnes, Stephen F. Hayes, Andy Ferguson, Jonathan Last, Dan Halper and many more. Learn more about The Weekly Standard  and our weekly magazine at WeeklyStandard.com',
+'Julie & Brandy', 'Join Julie Goldman (the gay) and Brandy Howard (the dumbass) as they dissect this week's political news. The podcast with lots of feelings, but no actual facts.  New episodes every Tuesday!',
+'Capitol Steps', 'The Capitol Steps bring their political musical satire to the air, now in two hour-long shows.  Tune in on the Fourth of July and New Year's Eve.Visit our website at www.capsteps.com for weekly songs and to purchase albums. We put the MOCK in Democracy!',
+'KCRW.com', 'Sometimes a panel discussion about current controversies in the cultural world, other times an in-depth interview with an author or leading figures in media the arts entertainment or politics, 'The Politics of Culture' examines the intersection where the world of politics and culture meet and sometimes collide.',
+'Pantsuit Politics', 'A podcast where a woman from the right and a woman from the left accessorize the news with a fresh perspective. Sarah Stewart Holland and Beth Silvers bring a nuanced perspective to discussions about politics and current events.',
+'Randy Newberg: Hunter, Host of Fresh Tracks TV, Speaker, and Hunting Activist', 'Hunt Talk Radio, Randy Newberg Unfiltered is a podcast covering hunting politics, public lands, and conservation topics; even a few things you didn’t need to know.  The best hunters you’ve never heard of join Randy to answer questions from the Hunt Talk web forum, share ideas, reveal tactics, and give perspectives unique to public land hunting.',
+'Michael Baranowski and Jay Carson', 'It&#039;s about politics. It&#039;s about ideas. It&#039;s about half an hour.',
+'theguardian.com', 'If you’re keen to keep abreast of UK and international politics then our Politics Weekly podcast is for you. The Guardian’s politics team unwind the political spin and delve into the key issues that drives the people in power. UK politics is the focus but the team also look at the big global political stories each week. Panellists include Guardian writers such as  Rowena Mason,  Gary Younge,  Polly Toynbee,  Michael White and  Rafael Behr and we regularly have guests from all side of the political spectrum',
+'ABC News', 'Headliner interviews and in-depth looks at the people and events shaping U.S. politics. Hosted by ABC News' Chief White House Correspondent Jonathan Karl, Political Director Rick Klein and Chief Political Analyst Matthew Dowd.',
+'Justin Robert Young', 'Justin Robert Young announces his intention to dissect the run for the White House. Just think, while you been getting down and out about the liars and the dirty dirty cheats of the world you could have been getting down to this sick beat.',
+'Slate Magazine/Panoply', 'Readings and discussions featuring today's best authors, recorded live at Washington DC's famous Politics & Prose bookstore and presented by Slate.com. Part of the Panoply Network.',
+'Marketplace', 'The economy & politics – from waaaaay outside the beltway. Marketplace looks at what matters most to Americans, and why the frame of "insiders vs. outsiders" says more than the stale divisions of "left vs. right" and "big government vs. small." From American Public Media. Visit Marketplace.org for more, or find us on Twitter, we're @marketplace.',
+'Bloomberg News', 'Under the leadership of Bloomberg Washington Bureau Chief Megan Murphy, veteran political TV news producers Betsy Fischer Martin and Tammy Haddad explore the tradecraft of politics with candidates, strategists and fellow journalists, including regular reporting and analysis from Bloomberg contributors.',
+'Steve Patterson | Covering Philosophy, Religion, Politics, Economics, Science, Mathematics, Metaphysics, Epistemology, Logic, Truth, Christianity, Buddhism, Hinduism, Atheism, Spirituality, Language, and Cultural Criticism', 'Interviews with intellectuals from across the globe. Topics include philosophy, religion, science, politics, economics, and everything else that's important to humans. Steve Patterson is a philosopher working outside of academia, and he is currently traveling the world to interview people in the pursuit of truth.',
+'Shorenstein Center on Media, Politics and Public Policy at Harvard Kennedy School', 'The Shorenstein Center Media and Politics Podcast features insight and expertise from leading voices at the intersection of media, politics and public policy. Prominent journalists, editors and academics address topics such as the media industry, campaigns and politics, foreign policy, race and gender, and technology.',
+'Slate', '
+            
+                Your daily politics update, brought to you by Slate. A SpokenEdition transforms written content into human-read audio you can listen to anywhere. It's perfect for times when you can't read - while driving, at the gym, doing chores, etc. Find more at www.spokenedition.com
+            
+        ',
+'WAMU 88.5', 'Sorting political fact from fiction, and having fun while we're at it. Join us for our weekly review of the politics, policies, and personalities of the District of Columbia, Maryland and Virginia.',
+'Letters and Politics', 'Letters & Politics seeks to explore the history behind today’s major global and national news stories. Hosted by Mitch Jeserich.',
+'David Runciman and Catherine Carr', 'Corbyn! Trump! Brexit! Politics has never been more unpredictable, more alarming or more interesting. TALKING POLITICS is the podcast that will try to make sense of it all. Each Thursday, in Cambridge, David Runciman will talk to his regular panel along with novelists, comedians, historians, philosophers - and even a few politicians - and ask them what they think is going on... Democracy is feeling the strain everywhere. What might happen next? How bad could it get? As it unfolds, TALKING POLITICS will be on it. It’s the political conversation everyone is having: please join us.',
+'The Huffington Post', '
+            
+                Follow American politics, keep up with the hottest political debates, and share your thoughts and opinions on the political news that matters to you.     A SpokenEdition transforms written content into human-read audio you can listen to anywhere. It's perfect for times when you can't read - while driving, at the gym, doing chores, etc. Find more at www.spokenedition.com
+            
+        ',
+'PodcastOne', '"Examining Politics," a weekly Washington Examiner podcast from Washington, D.C., that takes you deep inside political campaigns and Congress for a detailed look at what's happening, what's going to happen, and why.',
+'Courtney Brown, Ph.D.', 'Science Fiction and Politics, Courtney Brown, Emory University',
+'John Myers', 'Home of the weekly California Politics Podcast, hosted by John Myers of the Los Angeles Times.',
+'Oregon Public Broadcasting', 'OPB Politics Now takes a deep dive into the hottest political topics of the week. Every Friday, Host Geoff Norcross, OPB Senior Political Reporter Jeff Mapes along with other OPB reporters, editors, and special guests offer the inside scoop about candidates and issues affecting our region. They provide in-depth analysis, insight on the local political landscape and rousing conversation to satisfy the most enthusiastic political junkies as well as those who may not follow Oregon politics as closely. ',
+'Karen Tate', 'Named one of the Top 13 Most Influential Women in Goddess Spirituality - tune in to find out why!  Wednesday or Thursday nites, hear Dr. Rev. Karen Tate, author, speaker, and teacher, discussing global and personal issues with a broad spectrum of advocates, visionaries and forward thinkers from a Divine Feminine, Right Brain point of view.  Some call it the Feminine Consciousness or the shift away from patriarchal values.  These are issues that could raise your consciousness or save the world.  It's all the stuff Mom taught you to NEVER discuss at the dinner table - sex, religion, power and politics.  Fear Not - taste the forbidden fruit!  Rethink, reclaim and embrace the age old knowledge that's been denied us for too long.  Unlock your female tool kit and empower yourself as you learn long hidden truths from your home altar to the voting booth.  Learn what denying the feminine face of god, whether the Great She be deity, archetype or ideal, has cost humanity - particularly women!  Karen Tate's 4 published books include: Sacred Places of Goddess: 108 Destinations, Walking An Ancient Path: Rebirthing Goddess on Planet Earth, Goddess Calling - Inspirational Messages & Meditations of Sacred Feminine Liberation Thealogy and the anthology based on this show, Voices of the Sacred Feminine: Conversations to ReShape Our World.  Please "like" my Facebook pages for each book and my personal Facebook page found at  http://www.facebook.com/VoicesOfTheSacredFeminine',
+'Woodrow Wilson School of Public and International Affairs', 'WooCast is a podcast series produced by Princeton University's Woodrow Wilson School of Public and International Affairs.',
+'Financial Times', 'Discussion and analysis of U.K. and U.S. politics from the Financial Times' political commentators and correspondents. 
+
+Sebastian Payne presents weekly episodes on Westminster matters. Demetri Sevastopulo and Courtney Weaver host the Washington instalments.',
+'theguardian.com', 'Hosted by Guardian US reporter Sabrina Siddiqui, Politics for humans helps translate headline news into thoughtful, people-based conversations',
+'Dr. David Naimon', 'Interviews with experts in Natural Medicine, Nutrition, and the Politics of Health ',
+'Joe Ferrantelli, D.C.', 'Chiropractic Biophysics Seminars and Chiropractic United with Drs. Deed Harrison, Joe Ferrantelli, Fred DiDomenico discuss topics in current research, practice, politics, and much much more!  ',
+'Jamie Weinstein', 'Opinion Journalist. TV Commentator. Author. Satirist. Tomato Lover.',
+'Amine Tais', 'Historical surveys and current discussions surrounding religion, culture, and politics in Muslim settings',
+'F.A. Hayek Program for Advanced Study in Philosophy, Politics, and Economics', 'The Hayek Program Podcast includes audio from lectures, interviews, and discussions of  scholars and visitors from the F. A. Hayek Program for Advanced Study in Philosophy, Politics, and Economics at the Mercatus Center at George Mason University. The F. A. Hayek Program is devoted to the promotion of teaching and research on the institutional arrangements that are suitable for the support of free and prosperous societies. Implicit in this statement is the presumption that those arrangements are to some extent open to conscious selection, as well as the appreciation that the type of arrangements that are selected within a society can influence significantly the economic, political, and moral character of that society.
+',
+'New Hampshire Public Radio', 'Brady Carlson hosts this run-down on the latest in Primary politics, including behind-the-scenes stories from reporters, tales and trends from the trail, and "only in New Hampshire" moments the rest of the country is missing out on. ',
+'Drunken Politics', 'Uncomfortably aggressive political talk.
+
+Jamie Kilstein (Comedy Central, BBC) and Allison Kilkenny (Huffington Post, The Nation, Alternet.org, the BEAST) host a show about politics for people who hate politics! 
+
+It's like CNN, but with much, much more swearing.',
+'The Institute of World Politics', 'The Institute of World Politics is a graduate school of national security and international affairs, dedicated to developing leaders with a sound understanding of international realities and the ethical conduct of statecraft, based on knowledge and appreciation of the principles of the American political economy and the Western moral tradition.',
+'Andrew & Henry: Millennials, Bloggers, and Patriots', 'Love Being American is hosted by two millennials who discuss political and current events that are happening throughout America. Their unique perspective as millennials and avid patriots is guaranteed to entertain and give you a few laughs along the way.  
+
+Each Sunday, Andrew and Henry, discuss political issues and current events that took place during the prior week.  
+
+If you Love Being American, this podcast is for you. ',
+'Loyal Books', '“Many who scoff at a book of etiquette would be shocked to hear the least expression of levity touching the Ten Commandments...” Thus opens the introduction to one of the most popular American non-fiction books – one that was avidly studied by both men and women, children and adults, leaders of society and those who yearned to be part of the charmed circle! 
+
+Etiquette in Society, in Business, in Politics and at Home by Emily Post was first published in 1922 and became an instant bestseller. It has gone through several revisions, been updated frequently and continues to be an encyclopedia for those who are confused and in despair about which fork to use, and what to wear for a black tie dinner.
+
+Following the success of her book, Emily Post attained cult status and became a byword for doing the right thing. She was syndicated in at least 200 journals and magazines and spoke extensively on radio programs meant to ease the pain of the socially inept. Today, her descendants head a multimillion dollar conglomerate which includes the Emily Post Institute. Almost all her grandchildren and great-great-grandchildren have something to do with giving advice on social matters.
+
+The word etiquette has interesting origins. A Scottish gardener employed by Louis XIV to work in the gardens at Versailles was infuriated by people who trespassed on the perfectly manicured lawns. He put up signs or “tickets” known as “etiquettes” in French, warning people which paths to follow. However, when his signs were ignored, he complained to the King, who issued a stern warning, “Keep within the etiquettes!” 
+
+The chapters in Etiquette are divided according to different titles. Starting with “Introductions” it advises the aspiring man or woman about town on what is the correct form to be followed while introducing people to each other. Other chapters include Consideration for Servants, Details of Place at a Formal Dinner, The Child at Table etc. Some of the rules may seem quaint, dated and even amusing today.
+
+The rules have changed considerably since Emily Post first published her definitive book on the subject. Globalization has resulted in cross-cultural social dynamics. Yet, the primary rules of etiquette, namely respect, avoiding giving of offense and consideration for the feelings of others still remains paramount in our dealings and Etiquette in Society, in Business, in Politics and at Home remains a milestone in the annals of self-help books.
+',
+'Danny Winslow: Speculator of Politics | Primaries | 2016 Election Entertainment | Campaign News and Comedy', 'Speculation on 2016 Presidential Election, the Primary Campaign Politics, Debates, Polls, News about Candidates like Hillary Clinton and Donald Trump with Total Coverage of Soundbite Comedy & Entertainment ',
+'Adam Camac and Daniel Laguros: Interviewers, Questioners, and Co-hosts', 'Adam Camac and Daniel Laguros interview experts on foreign relations, economics, current events, politics, political theory, and more every weekday.',
+'Reuters', '
+            
+                Reuters is your politics news source for up to the minute, impartial political news coverage on the leaders, policies and agendas that shape our world.     A SpokenEdition transforms written content into human-read audio you can listen to anywhere. It's perfect for times when you can't read - while driving, at the gym, doing chores, etc. Find more at www.spokenedition.com
+            
+        ',
+'BBC Radio 5 live', 'John Pienaar shares his keen political observations, with news and interviews from key political figures in Westminster',
+'BBC', 'The BBC is a group of friends who like to get together and talk about beer, basketball, life, and other random stuff! Grab a beer and enjoy the show.  Check out our youtube page to view our recorded livestreams and all our episodes! 
+Youtube: https://tinyurl.com/breakfastbeercrew
+Instagram & Twitter: @breakfastbeercw
+Itunes: https://tinyurl.com/BBCItunes',
+'BBC World Service', 'The day's top stories from BBC News compiled twice daily in the week, once at weekends.',
+'BBC Radio 4', 'Melvyn Bragg and guests discuss the history of ideas',
+'BBC World Service', 'The best of BBC World Service documentaries and other factual programmes.',
+'BBC Radio 4', 'Download the best new comedy from Radio 4, every Friday. Features The News Quiz, The Now Show, Dead Ringers and The Museum of Curiosity.',
+'BBC Radio 4', 'Director of the British Museum, Neil MacGregor, narrates 100 programmes that retell humanity's history through the objects we have made',
+'BBC Radio 4', 'Insight, wit and analysis as BBC correspondents, journalists and writers take a closer look at the stories behind the headlines. Presented by Kate Adie and Pascale Harter.',
+'BBC Radio 4', 'Insight, analysis and expert debate as key policy makers are challenged on the latest news stories. From BBC Radio 4's Today programme',
+'BBC World Service', 'The story of our times told by the people who were there.',
+'BBC Radio 4', 'Witty, irreverent look at the world through scientists' eyes. With Brian Cox and Robin Ince',
+'BBC Radio 5 live', 'Mark Kermode joins Simon Mayo to give his verdict on the week's movies',
+'BBC World Service', 'The daily drama of money and work from the BBC.',
+'BBC Radio 4', 'Historical themes, events and key individuals from Akhenaten to Xenophon.',
+'BBC World Service', 'Explorations in the world of science.',
+'BBC Radio', 'Learn and practise useful English language for everyday situations with the BBC. Your weekly instruction manual for saying or doing something in English is published every Friday.',
+'BBC World Service', 'World Book Club invites the globe's great authors to discuss their best known novel. Presented by Harriett Gilbert, includes questions from World Service listeners.',
+'BBC Radio 4', 'Desert Island Discs was created by Roy Plomley in 1942, and the format is simple: a guest is invited by Kirsty Young to choose the eight records they would take with them to a desert island',
+'BBC World Service', 'The latest business and finance news from around the world from the BBC',
+'BBC World Service', 'Technological and digital news from around the world.',
+'BBC Radio 4', 'Tim Harford and the More or Less team try to make sense of the statistics which surround us. From BBC Radio 4',
+'BBC Radio', 'Every week, we look at a different everyday English phrase or piece of slang in this fun three-minute programme. From BBC World Service',
+'BBC Radio 3', 'The best of BBC Radio 3's flagship arts and ideas programme Free Thinking - featuring in-depth interviews and debates with artists, scientists and public figures. ',
+'BBC Radio 4', 'New research on how society works',
+'BBC Radio 5 live', 'The latest football news from BBC Radio 5 live with results, analysis, debate & exclusive interviews.',
+'BBC World Service', 'The latest science research and news stories from all over the world.',
+'BBC Radio Wales', 'Religious affairs programme, tackling the thornier issues of the day in a thought-provoking manner',
+'BBC World Service', 'Interviews, news and analysis of the day’s global events.',
+'BBC Radio 4', 'From Altruism to Wittgenstein, philosophers, theories and key themes.',
+'BBC Radio 4', 'Biographical series in which guests choose someone who has inspired their lives.',
+'BBC World Service', 'A daily digest of news and features presented by Dan Damon.',
+'BBC Radio 5 live', 'Have your say on the latest football action',
+'BBC World Service', 'News and analysis from the BBC's Focus on Africa. The Africa Today podcast is published from Monday to Friday. It contains the day's top African stories.',
+'BBC Radio 4', 'Weekly discussion programme, setting the cultural agenda every Monday',
+'BBC Radio 4', 'Scientific principles, theory, and the role of key figures in the advancement of science.',
+'BBC Radio', 'Insights into the business world - featuring content from BBC Radio 4's In Business programme, and also Global Business from the BBC World Service.',
+'BBC Radio 4', 'Contemporary drama in a rural setting',
+'BBC Radio 4', 'Brighten your week with the latest BBC Radio 4 comedy. Comedians including Mark Thomas and Tom Wrigglesworth alongside classic shows such as Just A Minute and Ed Reardon.',
+'BBC Radio 4', 'A rich selection of documentaries aimed at relentlessly curious minds, introduced by Rhianna Dhillon.',
+'BBC Radio 4', 'Every Friday we bring you a new drama from BBC Radio 4 or Radio 3. Exercise your imagination with some of the best writers and actors on radio. Storytelling at its very best.',
+'BBC Radio 4', 'Live magazine programme on the worlds of arts, literature, film, media and music',
+'BBC Radio 1', 'All of Scott’s show, without the music! Innuendo Bingo, prank calls, Chris’s stories, listeners’ dilemmas, Real Or No Real, stupid games: it’s all here for you, five days a week.',
+'BBC Radio 4', 'Popular culture, poetry, music and visual arts and the roles they play in our society.',
+'BBC Radio 5 live', 'Formula 1 interviews, reaction and reports. 5 live presents a round-up of the race weekend.',
+'BBC Radio 5 live', '5 live's science podcast, featuring Dr Karl, plus Dr Chris and Naked Scientists Chris Smith and Kat Arney with the hottest science news stories and analysis.',
+'BBC Radio 4', 'The programme that offers a female perspective on the world',
+'BBC Radio 4', 'Programme examining the ideas and forces which shape public policy in Britain and abroad, presented by distinguished writers, journalists and academics',
+'BBC Radio 2', 'Catch up with the latest Breakfast fun with Chris Evans. Hear the best stories and the biggest guests, every week. From BBC Radio 2.',
+'BBC Radio 4', 'Investigating every aspect of the food we eat',
+'BBC Radio 4', 'The BBC Natural History Unit produces a wide range of programmes that aim to immerse a listener in the wonder, surprise and importance that nature has to offer.',
+'BBC Radio 4', 'This podcast features Open Book and A Good Read. In Open Book Mariella Frostrup talks to authors about their work. In A Good Read Harriett Gilbert discusses favourite books.',
