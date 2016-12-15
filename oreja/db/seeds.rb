@@ -5,219 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require_relative "../../scraper/seed_data/provider_data.rb"
+require_relative "../../scraper/seed_data/podcast_data.rb"
+require_relative "../../scraper/seed_data/episode_data.rb"
+
+include SampleProviders, SamplePodcasts, SampleEpisodes
+
 Provider.destroy_all
 Podcast.destroy_all
 
-podcast_list = [
-[ 'Politics', "Politics - SermonAudio.com", "http://is1.mzstatic.com/image/thumb/Music62/v4/28/a0/0f/28a00fee-e9bf-c176-fc70-8d7453dc92d0/source/600x600bb.jpg", "Christianity"],
-[ 'Politics', "Politics", "http://is5.mzstatic.com/image/thumb/Music4/v4/83/e7/ec/83e7ec84-fdb8-ed27-ef0a-fdd1248c2c4d/source/600x600bb.jpg", "News & Politics"],
-[ 'NPR', "NPR Politics Podcast", "http://is5.mzstatic.com/image/thumb/Music122/v4/78/cf/f3/78cff347-3d72-de61-d3f7-dc2cd785e462/source/600x600bb.jpg", "News & Politics"],
-[ 'FiveThirtyEight - Nate Silver, Jody Avirgan, Clare Malone, Harry Enten', "FiveThirtyEight Politics", "http://is2.mzstatic.com/image/thumb/Music62/v4/c2/fc/d2/c2fcd2dd-d8e2-6b53-36b1-bdfe946e5568/source/600x600bb.jpg", "News & Politics"],
-[ 'WNYC Studios and The New Yorker', "The New Yorker: Politics and More", "http://is1.mzstatic.com/image/thumb/Music71/v4/b9/ae/b6/b9aeb685-2b75-30ff-7c01-4c579e15b2bc/source/600x600bb.jpg", "News & Politics"],
-[ 'HuffPost Politics', "So That Happened", "http://is5.mzstatic.com/image/thumb/Music71/v4/d5/6e/ab/d56eab4e-4cec-ff85-3634-22a27c830bb9/source/600x600bb.jpg", "News & Politics"],
-[ 'Bruce Carlson', "My History Can Beat Up Your Politics", "http://is2.mzstatic.com/image/thumb/Music4/v4/96/15/1d/96151df4-108b-f68a-7430-5a9737a391c2/source/600x600bb.jpg", "News & Politics"],
-[ 'TEDTalks', "TEDTalks News and Politics", "http://is4.mzstatic.com/image/thumb/Music4/v4/a8/42/8f/a8428f99-109a-3500-5dd7-eaee704657fa/source/600x600bb.jpg", "News & Politics"],
-[ 'The Weekly Standard', "Weekly Standard Podcast - Your source for conservative analysis of the news shaping US politics and world events", "http://is5.mzstatic.com/image/thumb/Music62/v4/64/60/d4/6460d4ce-76d1-699a-bce1-bbd4753d6785/source/600x600bb.jpg", "News & Politics"],
-[ 'Julie & Brandy', "Dumb, Gay Politics", "http://is3.mzstatic.com/image/thumb/Music62/v4/bd/c5/af/bdc5af2d-3de8-8bf2-3d39-ead9bc8527d9/source/600x600bb.jpg", "Comedy"],
-[ 'Capitol Steps', "Capitol Steps: Politics Takes a Holiday", "http://is1.mzstatic.com/image/thumb/Music62/v4/f6/96/df/f696df9c-2dc2-951b-96b2-5bca9894c022/source/600x600bb.jpg", "Comedy"],
-[ 'KCRW.com', "KCRW's Politics of Culture", "http://is4.mzstatic.com/image/thumb/Music/v4/7e/0c/9b/7e0c9bab-1354-f276-0a9f-a482827e9acf/source/600x600bb.jpg", "Design"],
-[ 'Pantsuit Politics', "Pantsuit Politics Podcast", "http://is3.mzstatic.com/image/thumb/Music71/v4/03/b6/55/03b65519-113e-8358-c5e1-30f157599543/source/600x600bb.jpg", "News & Politics"],
-[ 'Randy Newberg: Hunter, Host of Fresh Tracks TV, Speaker, and Hunting Activist', "Hunt Talk Radio, Randy Newberg Unfiltered | Hunting | Conservation | Politics | Tactics", "http://is1.mzstatic.com/image/thumb/Music62/v4/5b/97/a8/5b97a8d4-dcf9-5679-3551-426fb0922677/source/600x600bb.jpg", "Outdoor"],
-[ 'Michael Baranowski and Jay Carson', "The Politics Guys", "http://is2.mzstatic.com/image/thumb/Music62/v4/25/06/b9/2506b935-3125-d16d-4024-6c39cff93be7/source/600x600bb.jpg", "National"],
-[ 'theguardian.com', "The Guardian UK: Politics Weekly", "http://is5.mzstatic.com/image/thumb/Music62/v4/67/04/54/67045450-2ff2-4f3f-f5b7-3cf284ca25b2/source/600x600bb.jpg", "News & Politics"],
-[ 'ABC News', "Powerhouse Politics", "http://is2.mzstatic.com/image/thumb/Music19/v4/97/d1/d3/97d1d3f3-45b2-77ab-6b35-9ab38fe4dcf0/source/600x600bb.jpg", "News & Politics"],
-[ 'Justin Robert Young', "Politics Politics Politics", "http://is3.mzstatic.com/image/thumb/Music71/v4/63/16/15/63161514-c066-2945-750b-51bed26f70f7/source/600x600bb.jpg", "National"],
-[ 'Slate Magazine/Panoply', "Slate's Live at Politics and Prose", "http://is1.mzstatic.com/image/thumb/Music71/v4/6d/78/11/6d7811bd-5847-da66-8e55-e4397b8448bc/source/600x600bb.jpg", "Literature"],
-[ 'Marketplace', "Politics Inside Out from Marketplace", "http://is5.mzstatic.com/image/thumb/Music62/v4/2b/00/6e/2b006ede-5b3b-c469-52c9-ebe53feddf16/source/600x600bb.jpg", "News & Politics"],
-[ 'Bloomberg News', "Masters in Politics", "http://is3.mzstatic.com/image/thumb/Music71/v4/a3/9b/0c/a39b0c91-db86-bc50-a059-2df7e042494a/source/600x600bb.jpg", "News & Politics"],
-[ 'Steve Patterson | Covering Philosophy, Religion, Politics, Economics, Science, Mathematics, Metaphysics, Epistemology, Logic, Truth, Christianity, Buddhism, Hinduism, Atheism, Spirituality, Language, and Cultural Criticism', "Patterson in Pursuit: Philosophy | Politics | Religion", "http://is5.mzstatic.com/image/thumb/Music71/v4/0b/57/7e/0b577efb-aaed-0980-ffac-880ebc9a8eae/source/600x600bb.jpg", "Philosophy"],
-[ 'Shorenstein Center on Media, Politics and Public Policy at Harvard Kennedy School', "Media and Politics Podcast", "http://is4.mzstatic.com/image/thumb/Music62/v4/01/73/e6/0173e64d-80b6-e7a1-ca2d-ac9e22d7d608/source/600x600bb.jpg", "News & Politics"],
-[ 'Slate', "Slate Politics – Spoken Edition", "http://is3.mzstatic.com/image/thumb/Music71/v4/35/21/e3/3521e331-6ba7-1319-1035-868a64d01da7/source/600x600bb.jpg", "News & Politics"],
-[ 'WAMU 88.5', "The Kojo Nnamdi Show: The Politics Hour", "http://is1.mzstatic.com/image/thumb/Music62/v4/c7/b2/5b/c7b25b6f-b8d9-6425-e579-343185b9f5a8/source/600x600bb.jpg", "News & Politics"],
-[ 'Letters and Politics', "KPFA - Letters and Politics", "http://is1.mzstatic.com/image/thumb/Music49/v4/d2/b4/21/d2b421ee-5d99-840e-1a00-5832b27da808/source/600x600bb.jpg", "News & Politics"],
-[ 'David Runciman and Catherine Carr', "TALKING POLITICS", "http://is5.mzstatic.com/image/thumb/Music71/v4/b7/b2/7a/b7b27a7e-0a9b-8ff7-7786-7aa40a9c6f99/source/600x600bb.jpg", "News & Politics"],
-[ 'The Huffington Post', "HuffPost Politics – Spoken Edition", "http://is2.mzstatic.com/image/thumb/Music71/v4/79/25/fd/7925fd60-a6eb-794e-ea6f-ab53ceb078df/source/600x600bb.jpg", "News & Politics"],
-[ 'PodcastOne', "Examining Politics", "http://is5.mzstatic.com/image/thumb/Music62/v4/69/1e/9d/691e9d54-adb3-2baf-a8e6-2e0a566f11d2/source/600x600bb.jpg", "News & Politics"],
-[ 'Courtney Brown, Ph.D.', "Science Fiction and Politics, Courtney Brown, Emory University", "http://is2.mzstatic.com/image/thumb/Music62/v4/ce/80/27/ce80272b-066b-182e-3bde-decf1e353686/source/600x600bb.jpg", "Higher Education"],
-[ 'John Myers', "California Politics Podcast", "http://is3.mzstatic.com/image/thumb/Music71/v4/a9/52/3c/a9523c8f-7ae4-e6b8-0c93-dc63144f6768/source/600x600bb.jpg", "News & Politics"],
-[ 'Oregon Public Broadcasting', "OPB Politics Now", "http://is3.mzstatic.com/image/thumb/Music62/v4/5d/e9/30/5de9308e-5214-56b2-10de-13b5fa439a75/source/600x600bb.jpg", "News & Politics"],
-[ 'Karen Tate', "Sex, Religion, Power and Politics", "http://is2.mzstatic.com/image/thumb/Music71/v4/5f/d6/e3/5fd6e35d-3a39-39f4-44fe-b07b648e2328/source/600x600bb.jpg", "Spirituality"],
-[ 'Woodrow Wilson School of Public and International Affairs', "WooCast: News & Politics from Princeton's Experts", "http://is5.mzstatic.com/image/thumb/Music71/v4/52/be/52/52be52da-140f-9230-bff5-04da05159581/source/600x600bb.jpg", "News & Politics"],
-[ 'Financial Times', "FT Politics", "http://is2.mzstatic.com/image/thumb/Music71/v4/8d/bc/40/8dbc4086-3f04-335c-2d13-53dec8215aa4/source/600x600bb.jpg", "News & Politics"],
-[ 'theguardian.com', "Politics for humans", "http://is1.mzstatic.com/image/thumb/Music62/v4/d7/e6/97/d7e697fb-c4c8-e680-70ed-40bac08b1867/source/600x600bb.jpg", "News & Politics"],
-[ 'Dr. David Naimon', "Healthwatch with Dr. David Naimon:  Interviews with experts in Natural Medicine, Nutrition, and the Politics of Health", "http://is3.mzstatic.com/image/thumb/Music6/v4/fe/6b/91/fe6b9187-3129-e2de-f3c2-343b535e4f12/source/600x600bb.jpg", "Alternative Health"],
-[ 'Joe Ferrantelli, D.C.', "Chiropractic Biophysics (CBP) - Chiropractic United Podcast: Chiropractic Research, Technique, Politics, and Much, Much, More!", "http://is5.mzstatic.com/image/thumb/Music/v4/d0/80/94/d08094fd-79f0-3aaa-791f-a6fbe731eab1/source/600x600bb.jpg", "Alternative Health"],
-[ 'Jamie Weinstein', "The Jamie Weinstein Show | Lessons from Leaders in Politics, Business & Media", "http://is1.mzstatic.com/image/thumb/Music71/v4/32/19/b3/3219b34b-5542-a7e5-4b42-472599772dc3/source/600x600bb.jpg", "News & Politics"],
-[ 'Amine Tais', "The World of Islam: Culture, Religion, and Politics", "http://is5.mzstatic.com/image/thumb/Music/v4/25/44/97/25449781-ee1f-c5e1-36ae-525f18f5067f/source/600x600bb.jpg", "Islam"],
-[ 'F.A. Hayek Program for Advanced Study in Philosophy, Politics, and Economics', "Hayek Program Podcast", "http://is5.mzstatic.com/image/thumb/Music62/v4/b7/4d/64/b74d6430-1eb7-7b18-58f5-8ee672e826c0/source/600x600bb.jpg", "Higher Education"],
-[ 'New Hampshire Public Radio', "Primarily Politics from New Hampshire Public Radio", "http://is2.mzstatic.com/image/thumb/Music62/v4/8b/3a/41/8b3a4138-a438-16c9-dae7-815a6a07cf9f/source/600x600bb.jpg", "News & Politics"],
-[ 'Drunken Politics', "Drunken Politics", "http://is5.mzstatic.com/image/thumb/Music62/v4/9c/e4/b6/9ce4b61e-a821-812e-5cce-1c3f05498127/source/600x600bb.jpg", "News & Politics"],
-[ 'The Institute of World Politics', "The Institute of World Politics", "http://is4.mzstatic.com/image/thumb/Music71/v4/8f/3e/56/8f3e5695-6cc3-707f-c0cd-63052ab1b670/source/600x600bb.jpg", "Higher Education"],
-[ 'Andrew & Henry: Millennials, Bloggers, and Patriots', "Love Being American: Politics | Current Events | Patriotism | Millennials", "http://is4.mzstatic.com/image/thumb/Music62/v4/a0/af/ad/a0afad85-c6ac-c85b-2b96-435baf021c30/source/600x600bb.jpg", "News & Politics"],
-[ 'Loyal Books', "Etiquette in Society, in Business, in Politics and at Home by Emily Post", "http://is4.mzstatic.com/image/thumb/Music71/v4/c7/b4/e1/c7b4e1aa-1def-0271-a6c2-d1034585f5ec/source/600x600bb.jpg", "Self-Help"],
-[ 'Danny Winslow: Speculator of Politics | Primaries | 2016 Election Entertainment | Campaign News and Comedy', "Presidential Speculatainment", "http://is4.mzstatic.com/image/thumb/Music71/v4/07/3d/79/073d79cf-f161-6470-f621-82b022f441c7/source/600x600bb.jpg", "News & Politics"],
-[ 'Adam Camac and Daniel Laguros: Interviewers, Questioners, and Co-hosts', "Wake Up Call Podcast: Foreign Relations, Economics, Political Theory, Current Events, History, Politics, Countries, War and Pea", "http://is5.mzstatic.com/image/thumb/Music71/v4/8f/3e/05/8f3e05c5-f6de-8fb8-b90b-86d60c73f256/source/600x600bb.jpg", "News & Politics"],
-[ 'Reuters', "Reuters Politics – Spoken Edition", "http://is2.mzstatic.com/image/thumb/Music62/v4/94/79/b6/9479b6c0-40b5-ad9f-a47e-814fcb443e54/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio 5 live', "Pienaar's Politics", "http://is5.mzstatic.com/image/thumb/Music69/v4/0e/37/e7/0e37e7a2-6878-e0f9-9e04-a286ccfcbd04/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC', "Breakfast Beer Crew", "http://is1.mzstatic.com/image/thumb/Music62/v4/6d/0a/19/6d0a1941-5b6f-9a89-5eed-fd7520377b70/source/600x600bb.jpg", "Hobbies"],
-[ 'BBC World Service', "Global News Podcast", "http://is2.mzstatic.com/image/thumb/Music71/v4/b4/d3/d5/b4d3d5df-dfa7-b7c4-24a2-431510c284c1/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio 4', "In Our Time", "http://is2.mzstatic.com/image/thumb/Music62/v4/64/60/65/646065f1-1260-3389-aeff-f83b7aa07a90/source/600x600bb.jpg", "History"],
-[ 'BBC World Service', "The Documentary", "http://is5.mzstatic.com/image/thumb/Music62/v4/c9/16/c5/c916c5fe-f5d2-106a-3a36-aa1ff06513db/source/600x600bb.jpg", "History"],
-[ 'BBC Radio 4', "Friday Night Comedy from BBC Radio 4", "http://is3.mzstatic.com/image/thumb/Music71/v4/25/7b/c9/257bc9f5-b9b9-e771-361c-41dcef1ada70/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio 4', "A History of the World in 100 Objects", "http://is1.mzstatic.com/image/thumb/Music71/v4/3e/f1/ce/3ef1cef6-ab2d-3974-c028-5fd6d985b447/source/600x600bb.jpg", "History"],
-[ 'BBC Radio 4', "From Our Own Correspondent Podcast", "http://is2.mzstatic.com/image/thumb/Music71/v4/e9/3d/47/e93d4786-72b5-744d-2794-0e2fbe7d669c/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio 4', "Best of Today", "http://is2.mzstatic.com/image/thumb/Music71/v4/34/d5/02/34d502ec-1db4-7074-003e-6e013ea2188f/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC World Service', "Witness", "http://is4.mzstatic.com/image/thumb/Music69/v4/72/0e/67/720e6721-ca00-2478-62dd-a1469002b813/source/600x600bb.jpg", "History"],
-[ 'BBC Radio 4', "The Infinite Monkey Cage", "http://is5.mzstatic.com/image/thumb/Music71/v4/6a/1c/d3/6a1cd36e-ee81-c95a-5ff5-f44959b9e9d7/source/600x600bb.jpg", "Science & Medicine"],
-[ 'BBC Radio 5 live', "Kermode and Mayo's Film Review", "http://is4.mzstatic.com/image/thumb/Music62/v4/35/eb/d5/35ebd53e-2389-9efe-07b1-4fdc94dc7e3f/source/600x600bb.jpg", "Society & Culture"],
-[ 'BBC World Service', "Business Daily", "http://is4.mzstatic.com/image/thumb/Music62/v4/1c/e6/84/1ce68412-1074-d6e3-e123-9b259ef03963/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio 4', "In Our Time: History", "http://is2.mzstatic.com/image/thumb/Music71/v4/a0/ba/fe/a0bafe72-d792-7cbb-c9ca-06077984d88e/source/600x600bb.jpg", "History"],
-[ 'BBC World Service', "Discovery", "http://is3.mzstatic.com/image/thumb/Music62/v4/46/b8/56/46b85684-7bea-b0fa-6ba2-d52e317cd13c/source/600x600bb.jpg", "Science & Medicine"],
-[ 'BBC Radio', "6 Minute English", "http://is1.mzstatic.com/image/thumb/Music71/v4/5b/e4/72/5be472ad-24d4-70c0-6a58-5e9d5c9d9782/source/600x600bb.jpg", "Language Courses"],
-[ 'BBC World Service', "World Book Club", "http://is4.mzstatic.com/image/thumb/Music71/v4/da/8f/6d/da8f6d45-abe7-001e-71f6-f8b0f11a4fc5/source/600x600bb.jpg", "Personal Journals"],
-[ 'BBC Radio 4', "Desert Island Discs", "http://is3.mzstatic.com/image/thumb/Music62/v4/28/75/9e/28759e1f-7e22-1cca-2e24-de2ff7dc7a08/source/600x600bb.jpg", "Personal Journals"],
-[ 'BBC World Service', "World Business Report", "http://is1.mzstatic.com/image/thumb/Music62/v4/0f/56/28/0f562892-29f2-6710-def2-f30976f60b10/source/600x600bb.jpg", "Business News"],
-[ 'BBC World Service', "Click", "http://is3.mzstatic.com/image/thumb/Music71/v4/94/81/cd/9481cd3c-8a09-19a5-46e0-7042d7590363/source/600x600bb.jpg", "Science & Medicine"],
-[ 'BBC Radio 4', "More or Less: Behind the Stats", "http://is2.mzstatic.com/image/thumb/Music62/v4/99/34/8a/99348a11-08d6-eff3-9ff9-93fe48fc9206/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio', "The English We Speak", "http://is3.mzstatic.com/image/thumb/Music62/v4/af/b4/71/afb47115-d451-04f3-3e0b-a42eafe31504/source/600x600bb.jpg", "Language Courses"],
-[ 'BBC Radio 3', "Arts and Ideas", "http://is1.mzstatic.com/image/thumb/Music71/v4/cb/68/b9/cb68b9f8-5150-2c59-d9fe-e1ab97761e64/source/600x600bb.jpg", "Places & Travel"],
-[ 'BBC Radio 4', "Thinking Allowed", "http://is5.mzstatic.com/image/thumb/Music71/v4/b5/07/21/b5072164-aa69-563f-ba60-aee186856922/source/600x600bb.jpg", "Science & Medicine"],
-[ 'BBC Radio 5 live', "5 live's Football Daily", "http://is3.mzstatic.com/image/thumb/Music62/v4/0f/f3/ab/0ff3ab8f-369e-508a-f12e-45136b19988b/source/600x600bb.jpg", "Professional"],
-[ 'BBC World Service', "Science in Action", "http://is5.mzstatic.com/image/thumb/Music62/v4/c1/b8/51/c1b851aa-bb0a-f302-0aea-2468e7c9777a/source/600x600bb.jpg", "Technology"],
-[ 'BBC Radio Wales', "All Things Considered", "http://is5.mzstatic.com/image/thumb/Music71/v4/80/0f/6b/800f6bd1-b92c-a9fe-94b0-285730267bb2/source/600x600bb.jpg", "Christianity"],
-[ 'BBC World Service', "Newshour", "http://is3.mzstatic.com/image/thumb/Music62/v4/91/95/c6/9195c636-4644-e0b6-dc48-89be7df86a56/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio 4', "In Our Time: Philosophy", "http://is2.mzstatic.com/image/thumb/Music71/v4/44/76/a5/4476a5ba-4e3c-044b-e69d-d7243aafcfc2/source/600x600bb.jpg", "History"],
-[ 'BBC Radio 4', "Great Lives", "http://is3.mzstatic.com/image/thumb/Music71/v4/54/7e/0c/547e0c24-862a-997b-063a-c69c0f0acdc3/source/600x600bb.jpg", "Personal Journals"],
-[ 'BBC World Service', "World Update: Daily Commute", "http://is3.mzstatic.com/image/thumb/Music71/v4/20/44/5c/20445ce9-2d10-c3a3-a7ba-f4e88eb0d905/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio 5 live', "606", "http://is4.mzstatic.com/image/thumb/Music71/v4/44/5f/6b/445f6bce-fa4c-7d2b-8509-1ba0139c6529/source/600x600bb.jpg", "Professional"],
-[ 'BBC World Service', "Africa Today", "http://is3.mzstatic.com/image/thumb/Music71/v4/29/9b/37/299b3776-2331-57b6-da0f-be882a09ab0d/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio 4', "Start the Week", "http://is5.mzstatic.com/image/thumb/Music71/v4/70/3d/a1/703da149-9317-3fb4-ed49-adcf7c4626b3/source/600x600bb.jpg", "Society & Culture"],
-[ 'BBC Radio 4', "In Our Time: Science", "http://is2.mzstatic.com/image/thumb/Music71/v4/e1/e6/d0/e1e6d06a-e75c-d9d5-5b1f-2fdc74fc2189/source/600x600bb.jpg", "History"],
-[ 'BBC Radio', "The World of Business", "http://is5.mzstatic.com/image/thumb/Music71/v4/9f/00/57/9f005750-f4a8-8f13-f49a-37df470ebe97/source/600x600bb.jpg", "Business News"],
-[ 'BBC Radio 4', "The Archers", "http://is3.mzstatic.com/image/thumb/Music19/v4/35/65/c1/3565c18c-4036-e486-8e73-d92d99fd38e0/source/600x600bb.jpg", "Performing Arts"],
-[ 'BBC Radio 4', "Comedy of the Week", "http://is1.mzstatic.com/image/thumb/Music71/v4/27/e3/aa/27e3aac1-f24b-3b9e-3376-25baacc30a28/source/600x600bb.jpg", "Comedy"],
-[ 'BBC Radio 4', "Seriously...", "http://is1.mzstatic.com/image/thumb/Music71/v4/8e/ae/6c/8eae6c1e-7cc5-def4-1950-870ed4fb5da7/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio 4', "Drama of the Week", "http://is3.mzstatic.com/image/thumb/Music71/v4/98/36/5d/98365d6a-d3e5-cdbe-fd21-d268df97b303/source/600x600bb.jpg", "Performing Arts"],
-[ 'BBC Radio 4', "Front Row", "http://is1.mzstatic.com/image/thumb/Music71/v4/ad/db/6b/addb6be5-3a46-10d1-aa0a-74def98bdd00/source/600x600bb.jpg", "Society & Culture"],
-[ 'BBC Radio 1', "Scott Mills Daily", "http://is4.mzstatic.com/image/thumb/Music62/v4/a4/12/f5/a412f5c1-94fe-4838-fe0a-d32dc9e0ab44/source/600x600bb.jpg", "Comedy"],
-[ 'BBC Radio 4', "In Our Time: Culture", "http://is1.mzstatic.com/image/thumb/Music62/v4/ae/51/de/ae51de35-78b6-2108-e605-71234b013b5c/source/600x600bb.jpg", "History"],
-[ 'BBC Radio 5 live', "Chequered Flag Formula 1", "http://is2.mzstatic.com/image/thumb/Music62/v4/fd/27/87/fd278768-ef3e-39ff-ed51-b7c8cf7b910d/source/600x600bb.jpg", "Professional"],
-[ 'BBC Radio 5 live', "5 live Science Podcast", "http://is1.mzstatic.com/image/thumb/Music62/v4/ee/9c/a9/ee9ca9ef-9863-9da1-288d-19a6698d383c/source/600x600bb.jpg", "Natural Sciences"],
-[ 'BBC Radio 4', "Woman's Hour", "http://is5.mzstatic.com/image/thumb/Music71/v4/c2/df/a0/c2dfa03e-a69f-4db3-51bc-b2c20c2e4dfd/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio 4', "Analysis", "http://is1.mzstatic.com/image/thumb/Music71/v4/59/bd/ba/59bdba79-0d6f-f4dd-0658-a504f0d2d283/source/600x600bb.jpg", "News & Politics"],
-[ 'BBC Radio 2', "Chris Evans - The Best Bits", "http://is1.mzstatic.com/image/thumb/Music62/v4/77/6b/85/776b8552-d3fc-3027-ae29-6cd6e6ee0993/source/600x600bb.jpg", "Comedy"],
-[ 'BBC Radio 4', "Food Programme", "http://is4.mzstatic.com/image/thumb/Music71/v4/90/6c/29/906c291c-70fa-9a3c-a5c8-39e945a8f5eb/source/600x600bb.jpg", "Food"],
-[ 'BBC Radio 4', "Best of Natural History Radio", "http://is3.mzstatic.com/image/thumb/Music62/v4/93/89/14/938914a8-f895-6bd3-3d83-717139ff02ca/source/600x600bb.jpg", "Natural Sciences"],
-[ 'BBC Radio 4', "Books and Authors", "http://is3.mzstatic.com/image/thumb/Music62/v4/d3/1c/86/d31c866b-bc96-df7f-fc03-b31c49e33454/source/600x600bb.jpg", "Society & Culture"]
 
-]
+podcast_list = PODCASTS
 
-provider_list = [
-'Politics',
-'Politics',
-'NPR',
-'FiveThirtyEight - Nate Silver, Jody Avirgan, Clare Malone, Harry Enten',
-'WNYC Studios and The New Yorker',
-'HuffPost Politics',
-'Bruce Carlson',
-'TEDTalks',
-'The Weekly Standard',
-'Julie & Brandy',
-'Capitol Steps',
-'KCRW.com',
-'Pantsuit Politics',
-'Randy Newberg: Hunter, Host of Fresh Tracks TV, Speaker, and Hunting Activist',
-'Michael Baranowski and Jay Carson',
-'theguardian.com',
-'ABC News',
-'Justin Robert Young',
-'Slate Magazine/Panoply',
-'Marketplace',
-'Bloomberg News',
-'Steve Patterson | Covering Philosophy, Religion, Politics, Economics, Science, Mathematics, Metaphysics, Epistemology, Logic, Truth, Christianity, Buddhism, Hinduism, Atheism, Spirituality, Language, and Cultural Criticism',
-'Shorenstein Center on Media, Politics and Public Policy at Harvard Kennedy School',
-'Slate',
-'WAMU 88.5',
-'Letters and Politics',
-'David Runciman and Catherine Carr',
-'The Huffington Post',
-'PodcastOne',
-'Courtney Brown, Ph.D.',
-'John Myers',
-'Oregon Public Broadcasting',
-'Karen Tate',
-'Woodrow Wilson School of Public and International Affairs',
-'Financial Times',
-'theguardian.com',
-'Dr. David Naimon',
-'Joe Ferrantelli, D.C.',
-'Jamie Weinstein',
-'Amine Tais',
-'F.A. Hayek Program for Advanced Study in Philosophy, Politics, and Economics',
-'New Hampshire Public Radio',
-'Drunken Politics',
-'The Institute of World Politics',
-'Andrew & Henry: Millennials, Bloggers, and Patriots',
-'Loyal Books',
-'Danny Winslow: Speculator of Politics | Primaries | 2016 Election Entertainment | Campaign News and Comedy',
-'Adam Camac and Daniel Laguros: Interviewers, Questioners, and Co-hosts',
-'Reuters',
-'BBC Radio 5 live',
-'BBC',
-'BBC World Service',
-'BBC Radio 4',
-'BBC World Service',
-'BBC Radio 4',
-'BBC Radio 4',
-'BBC Radio 4',
-'BBC Radio 4',
-'BBC World Service',
-'BBC Radio 4',
-'BBC Radio 5 live',
-'BBC World Service',
-'BBC Radio 4',
-'BBC World Service',
-'BBC Radio',
-'BBC World Service',
-'BBC Radio 4',
-'BBC World Service',
-'BBC World Service',
-'BBC Radio 4',
-'BBC Radio',
-'BBC Radio 3',
-'BBC Radio 4',
-'BBC Radio 5 live',
-'BBC World Service',
-'BBC Radio Wales',
-'BBC World Service',
-'BBC Radio 4',
-'BBC Radio 4',
-'BBC World Service',
-'BBC Radio 5 live',
-'BBC World Service',
-'BBC Radio 4',
-'BBC Radio 4',
-'BBC Radio',
-'BBC Radio 4',
-'BBC Radio 4',
-'BBC Radio 4',
-'BBC Radio 4',
-'BBC Radio 4',
-'BBC Radio 1',
-'BBC Radio 4',
-'BBC Radio 5 live',
-'BBC Radio 5 live',
-'BBC Radio 4',
-'BBC Radio 4',
-'BBC Radio 2',
-'BBC Radio 4',
-'BBC Radio 4',
-'BBC Radio 4'
+provider_list = PROVIDERS
 
+episode_list = EPISODES
 
-    
-    ]
-    
 provider_list.each do |provider_name|
     Provider.find_or_create_by(name: provider_name)
 end
@@ -227,11 +30,17 @@ end
 
 p "Created #{Provider.count} providers"
 
-podcast_list.each do |provider, podcast, image, genre|
+podcast_list.each do |provider, description, podcast, image, genre|
     provider_object = Provider.find_by name: provider
-    provider_object.podcasts.create( provider_id: provider, name: podcast, image_url: image, genre: genre)
+    provider_object.podcasts.create( provider_id: provider, summary: description, name: podcast, image_url: image, genre: genre)
 end
 
 
 p "Created #{Podcast.count} podcasts"
 
+episode_list.each do |title, episode_description, pubdate, duration, podcast_name|
+    podcast_object = Podcast.find_by name: podcast_name
+    podcast_object.episodes.create(name: title, description: episode_description, air_date: pubdate, duration: duration, podcast_id: podcast_name)
+end
+
+p "Created #{Episode.count} episodes"

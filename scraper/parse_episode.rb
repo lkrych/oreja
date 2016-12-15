@@ -27,7 +27,7 @@ def find_episodes(podcast)
     page = HTTParty.get(podcast_link)
     parse_page = Nokogiri::XML(page.body)
     titles = parse_page.xpath("//item//title").collect {|episode| episode.content.gsub('"','')}
-    episode_details = parse_page.xpath("//item//description").collect {|episode| episode.content.gsub("\n","").gsub('"','')}
+    episode_details = parse_page.xpath("//item//description").collect {|episode| episode.content.gsub("\n","").gsub('"','').gsub(/<.+?>/,'')}
     pubdate = parse_page.xpath("//item//pubDate").collect {|episode| episode.content}
     duration = parse_page.xpath("//item//itunes:duration").collect {|episode| episode.content}
     
@@ -41,8 +41,8 @@ end
 
 def write_episode
   open("seed_data/episode_data.rb","w") do |f|
-    f << "module SamplePodcastss\n"
-    f << "PODCASTS = [\n"
+    f << "module SampleEpisodes\n"
+    f << "EPISODES = [\n"
     RESULTS.each do |podcast|
       episodes = find_episodes(podcast)
       episodes.each do |podcast_episode|

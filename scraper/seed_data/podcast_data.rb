@@ -1,4 +1,4 @@
-module SamplePodcastss
+module SamplePodcasts
     PODCASTS = [
         [ "Politics", "The latest podcast feed searching 'Politics' on SermonAudio.com.", "Politics - SermonAudio.com", "http://is1.mzstatic.com/image/thumb/Music62/v4/28/a0/0f/28a00fee-e9bf-c176-fc70-8d7453dc92d0/source/600x600bb.jpg", "Christianity"],
         [ "Politics", "Our weekly podcast on political matters", "Politics", "http://is5.mzstatic.com/image/thumb/Music4/v4/83/e7/ec/83e7ec84-fdb8-ed27-ef0a-fdd1248c2c4d/source/600x600bb.jpg", "News & Politics"],

@@ -36,7 +36,7 @@ end
 def write_podcast
   attributes = [:collectionName, :artworkUrl600,:primaryGenreName]
   open("seed_data/podcast_data.rb","w") do |f|
-    f << "module SamplePodcastss\n"
+    f << "module SamplePodcasts\n"
     f << "PODCASTS = [\n"
     RESULTS.each do |podcast|
       f << "[ " + "\"#{podcast[:artistName]}\"" + ", "
