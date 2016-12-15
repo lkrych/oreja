@@ -1,6 +1,10 @@
 require "nokogiri"
 require "httparty"
 
+require_relative "sampledata"
+
+include SampleData
+
 
 ## Use these commands to test out your scraping commands before batching them.
 
@@ -23,25 +27,35 @@ def find_episodes(podcast)
     page = HTTParty.get(podcast_link)
     parse_page = Nokogiri::XML(page.body)
     titles = parse_page.xpath("//item//title").collect {|episode| episode.content}
-    episode_details = parse_page.xpath("//item//description").collect {|episode| episode.content.gsub("\n","")}
+    episode_details = parse_page.xpath("//item//description").collect {|episode| episode.content.gsub("\n","").gsub('"','')}
     pubdate = parse_page.xpath("//item//pubDate").collect {|episode| episode.content}
     duration = parse_page.xpath("//item//itunes:duration").collect {|episode| episode.content}
     
     episode_information = titles.zip(episode_details,pubdate,duration)
     
     return episode_information
-    
+  
 end
     
 # 
 
 def write_episode
-  open("provider_data.txt","w") do |f|
+  open("seed_data/episode_data.rb","w") do |f|
+    f << "module SamplePodcastss\n"
+    f << "PODCASTS = [\n"
     RESULTS.each do |podcast|
-      f <<   "\'#{podcast[:artistName]}\'" + ", "
-      f << "\'#{find_description(podcast)}\'"
-      f << ",\n"
+      episodes = find_episodes(podcast)
+      episodes.each do |podcast_episode|
+        f << "[ " +   "\"#{podcast_episode[0]}\"" + ", "
+        f <<  "\"#{podcast_episode[1]}\"" + ", "
+        f <<  "\"#{podcast_episode[2]}\"" + ", "
+        f <<  "\"#{podcast_episode[3]}\"" + ", "
+        f <<   "\"#{podcast[:collectionName]}\"" 
+        f << "],\n"
+      end
     end
+    f << "]\n"
+    f << "end"
   end
 end
 

@@ -24,17 +24,23 @@ def find_description(podcast)
     descrip_link = podcast[:feedUrl]
     page = HTTParty.get(descrip_link)
     parse_page = Nokogiri::XML(page.body)
-    description = parse_page.at_css("description").content
+    description = parse_page.at_css("description").content.gsub('"','') #remove quotation marks 
     return description
     
 end
 
+#Write podcast
+#Adds module formatting
+#Then Adds Provider, description, podcast_name, image_url, and genre
+
 def write_podcast
   attributes = [:collectionName, :artworkUrl600,:primaryGenreName]
-  open("podcast_data.txt","w") do |f|
+  open("seed_data/podcast_data.rb","w") do |f|
+    f << "module SamplePodcastss\n"
+    f << "PODCASTS = [\n"
     RESULTS.each do |podcast|
-      f << "[ " + "\'#{podcast[:artistName]}\'" + ", "
-      f << "\'#{find_description(podcast)}\'" + ", "
+      f << "[ " + "\"#{podcast[:artistName]}\"" + ", "
+      f << "\"#{find_description(podcast)}\"" + ", "
       attributes.each do |attribute|
         if attribute != :primaryGenreName
           f << "\"#{podcast[attribute]}\"" + ", "
@@ -44,6 +50,8 @@ def write_podcast
       end
       f << "],\n"
     end
+    f << "]\n"
+    f << "end"
   end
 end
 
