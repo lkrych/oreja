@@ -1,0 +1,40 @@
+body{
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+}
+
+header{
+  display: none;
+}
+
+footer{
+  background-color: #262626;
+  height: 10vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 1vh 0;
+  text-align: center;
+}
+
+footer nav ul li{
+  display: inline-block;
+  width: 23vw;
+}
+
+footer nav img{
+  height: 7vh;
+}
+
+.profile-photo{
+  border: 3.5px solid #fff;
+  border-radius: 100%;
+  padding: 3.5px;
+}
