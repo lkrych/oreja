@@ -1,24 +1,18 @@
-%p#notice= notice
-%h1 Episodes
 %table
   %thead
     %tr
       %th Name
       %th Description
       %th Duration
-      %th Air date
-      %th Podcast
+      %th Air Date
       %th{:colspan => "3"}
   %tbody
     - @episodes.each do |episode|
       %tr
-        %td= episode.name
+        %td= link_to(episode.name,episode_path(episode.id))
         %td= episode.description
         %td= episode.display_time("duration") 
         %td= episode.display_time("air_date")
-        %td= episode.podcast.name
         %td= link_to 'Show', episode
         %td= link_to 'Edit', edit_episode_path(episode)
         %td= link_to 'Destroy', episode, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Episode', new_episode_path
