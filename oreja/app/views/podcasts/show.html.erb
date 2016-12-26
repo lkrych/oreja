@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Logo:</strong>
+  <%= image_tag(@podcast.image_url) %>
+</p>
+
+<p>
   <strong>Genre:</strong>
   <%= @podcast.genre %>
 </p>
@@ -14,6 +19,37 @@
   <strong>Summary:</strong>
   <%= @podcast.summary %>
 </p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @provider.name %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Duration</th>
+      <th>Air Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @episodes.each do |episode| %>
+      <tr>
+        <td><%= link_to(episode.name,episode_path(episode.id)) %></td>
+        <td><%= episode.description %></td>
+        <td><%= episode.duration.strftime("%H:%M:%S")  %></td>
+        <td><%= episode.air_date.to_formatted_s(:long)    %></td>
+        <td><%= link_to 'Show', episode %></td>
+        <td><%= link_to 'Edit', edit_episode_path(episode) %></td>
+        <td><%= link_to 'Destroy', episode, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_podcast_path(@podcast) %> |
 <%= link_to 'Back', podcasts_path %>

@@ -10,6 +10,9 @@ class PodcastsController < ApplicationController
   # GET /podcasts/1
   # GET /podcasts/1.json
   def show
+    @podcast = Podcast.find_by_name(params[:name])
+    @provider = Provider.find_by(@podcast.provider_id)
+    @episodes = @podcast.episodes
   end
 
   # GET /podcasts/new
