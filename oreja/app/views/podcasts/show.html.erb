@@ -41,7 +41,7 @@
       <tr>
         <td><%= link_to(episode.name,episode_path(episode.id)) %></td>
         <td><%= episode.description %></td>
-        <td><%= episode.duration.strftime("%H:%M:%S")  %></td>
+        <td><%= episode.duration.strftime("%H:%M:%S") %></td>
         <td><%= episode.air_date.to_formatted_s(:long)    %></td>
         <td><%= link_to 'Show', episode %></td>
         <td><%= link_to 'Edit', edit_episode_path(episode) %></td>

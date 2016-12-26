@@ -12,12 +12,12 @@
 
 <p>
   <strong>Duration:</strong>
-  <%= @episode.duration %>
+  <%= @episode.duration.strftime("%H:%M:%S") %>
 </p>
 
 <p>
   <strong>Air date:</strong>
-  <%= @episode.air_date %>
+  <%= @episode.air_date.to_formatted_s(:long) %>
 </p>
 
 <%= link_to 'Edit', edit_episode_path(@episode) %> |
