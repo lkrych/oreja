@@ -1,0 +1,39 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @podcast.name
+%p
+  %strong Logo:
+  = image_tag(@podcast.image_url)
+%p
+  %strong Genre:
+  = @podcast.genre
+%p
+  %strong Summary:
+  = @podcast.summary
+%p
+  %strong Provider:
+  = @provider.name
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Duration
+      %th Air Date
+      %th{:colspan => "3"}
+  %tbody
+    - @episodes.each do |episode|
+      %tr
+        %td= link_to(episode.name,episode_path(episode.id))
+        %td= episode.description
+        %td= episode.duration
+        -#.strftime("%H:%M:%S")
+        %td= episode.air_date
+        -#.to_formatted_s(:long)
+        -# %td= link_to 'Show', episode
+        %td= link_to 'Edit', edit_episode_path(episode)
+        %td= link_to 'Destroy', episode, method: :delete, data: { confirm: 'Are you sure?' }
+= link_to 'Edit', edit_podcast_path(@podcast)
+|
+= link_to 'Back', podcasts_path

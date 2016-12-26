@@ -1,0 +1,23 @@
+= form_for(episode) do |f|
+  - if episode.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(episode.errors.count, "error")
+        prohibited this episode from being saved:
+      %ul
+        - episode.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :duration
+    = f.time_select :duration
+  .field
+    = f.label :air_date
+    = f.datetime_select :air_date
+  .actions
+    = f.submit

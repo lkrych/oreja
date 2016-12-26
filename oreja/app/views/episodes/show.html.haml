@@ -1,0 +1,18 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @episode.name
+%p
+  %strong Description:
+  = @episode.description
+%p
+  %strong Duration:
+  = @episode.duration
+  -#.strftime("%H:%M:%S")
+%p
+  %strong Air date:
+  = @episode.air_date
+  -#.to_formatted_s(:long)
+= link_to 'Edit', edit_episode_path(@episode)
+|
+= link_to 'Back', episodes_path
