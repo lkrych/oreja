@@ -24,5 +24,10 @@ Then(/^I expect to see "([^"]*)"$/) do |arg1|
 end
 
 Given(/^I click on "([^"]*)"$/) do |arg1|
-  find("a", text: arg1)
+  find_link(arg1)
 end
+
+Given(/^i've loaded the seeds$/) do
+  Rails.application.load_seed
+end
+

@@ -6,6 +6,8 @@ Feature:
 
 Background: providers, podcasts, and episodes in database
   
+  Given i've loaded the seeds
+  
   Given the following providers exist:
   | name   | description |        
   | 'Vox / Panoply' |       |     
@@ -45,6 +47,11 @@ Scenario: Click on image of The Weeds and see latest episodes
   Then I expect to see "Kentucky, the Rust Belt"
   And I expect to see "Russia and the American Dream"
   
+Scenario: Check to see if seeded podcasts are linked together properly
+  Given I am on the providers page
+  And I follow "BBC Radio 4"
+  Then I expect to see "In Our Time"
+  And I expect to see "Best of Today"
 
 
    
