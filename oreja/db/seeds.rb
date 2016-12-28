@@ -13,6 +13,7 @@ include SampleProviders, SamplePodcasts, SampleEpisodes
 
 Provider.destroy_all
 Podcast.destroy_all
+Episode.destroy_all
 
 
 podcast_list = PODCASTS

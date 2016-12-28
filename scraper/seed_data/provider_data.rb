@@ -100,5 +100,7 @@ PROVIDERS = [
 'BBC Radio 4',
 'BBC Radio 4',
 'BBC Radio 4',
+'Vox / Panoply / Ezra Klein / Sarah Kliff / Matt Yglesias',
+'Vox / Panoply',
 ]
 end

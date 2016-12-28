@@ -24,7 +24,7 @@ def find_description(podcast)
     descrip_link = podcast[:feedUrl]
     page = HTTParty.get(descrip_link)
     parse_page = Nokogiri::XML(page.body)
-    description = parse_page.at_css("description").content.gsub('"','') #remove quotation marks 
+    description = parse_page.at_css("description").content.gsub('"','') rescue "blank" #remove quotation marks also, rescue if description blank
     return description
     
 end
