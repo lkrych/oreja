@@ -36,8 +36,6 @@ PROVIDERS = [
 'Woodrow Wilson School of Public and International Affairs',
 'Financial Times',
 'theguardian.com',
-'Dr. David Naimon',
-'Joe Ferrantelli, D.C.',
 'Jamie Weinstein',
 'Amine Tais',
 'F.A. Hayek Program for Advanced Study in Philosophy, Politics, and Economics',

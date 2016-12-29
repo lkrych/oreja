@@ -39,7 +39,7 @@ end
 # 
 
 def write_episode
-  open("seed_data/vox_data.rb","w") do |f|
+  open("seed_data/episode_data.rb","w") do |f|
     f << "module SampleEpisodes\n"
     f << "EPISODES = [\n"
     RESULTS.each do |podcast|

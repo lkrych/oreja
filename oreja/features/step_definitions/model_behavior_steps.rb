@@ -27,7 +27,7 @@ Given(/^I click on "([^"]*)"$/) do |arg1|
   find_link(arg1)
 end
 
-Given(/^i've loaded the seeds$/) do
-  Rails.application.load_seed
+Given(/^I pause to inspect$/) do
+  binding.pry
 end
 

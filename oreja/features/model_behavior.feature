@@ -6,7 +6,6 @@ Feature:
 
 Background: providers, podcasts, and episodes in database
   
-  Given i've loaded the seeds
   
   Given the following providers exist:
   | name   | description |        
@@ -49,6 +48,7 @@ Scenario: Click on image of The Weeds and see latest episodes
   
 Scenario: Check to see if seeded podcasts are linked together properly
   Given I am on the providers page
+  And I pause to inspect
   And I follow "BBC Radio 4"
   Then I expect to see "In Our Time"
   And I expect to see "Best of Today"
