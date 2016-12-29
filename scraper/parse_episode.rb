@@ -29,7 +29,7 @@ def find_episodes(podcast)
     titles = parse_page.xpath("//title").collect {|episode| episode.content.gsub('"','')}
     episode_details = parse_page.xpath("//description").collect {|episode| episode.content.gsub("\n","").gsub('"','').gsub(/<.+?>/,'')}
     pubdate = parse_page.xpath("//pubDate").collect {|episode| episode.content}
-    duration = parse_page.xpath("//itunes:duration").collect {|episode| episode.content}
+    duration = parse_page.xpath("//duration").collect {|episode| episode.content}
     episode_information = titles.zip(episode_details,pubdate,duration)
     
     return episode_information

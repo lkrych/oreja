@@ -9,7 +9,7 @@
   %tbody
     - @podcasts.each do |podcast|
       %tr
-        %td= link_to(image_tag(podcast.image_url), podcast_path(:id => podcast.id, :name => podcast.name))
+        %td= link_to(image_tag(podcast.image_url), podcast_path(:id => podcast.id, :name => podcast.name), :id => podcast.id)
         %td= podcast.name
         %td= podcast.genre
         %td= podcast.summary

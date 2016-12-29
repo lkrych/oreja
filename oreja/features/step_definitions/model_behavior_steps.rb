@@ -24,7 +24,8 @@ Then(/^I expect to see "([^"]*)"$/) do |arg1|
 end
 
 Given(/^I click on "([^"]*)"$/) do |arg1|
-  find_link(arg1)
+  podcast_id = Podcast.find_by_name(arg1).id
+  click_link(podcast_id)
 end
 
 Given(/^I pause to inspect$/) do
