@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'signup', to: 'users#new'
+
   resources :episodes
   resources :podcasts
   resources :providers
