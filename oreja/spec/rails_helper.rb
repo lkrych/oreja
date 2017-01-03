@@ -6,7 +6,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 
-Rails.application.load_seed
+#Rails.application.load_seed uncomment if you need to test with seeded database
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
