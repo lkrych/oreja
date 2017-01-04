@@ -3,7 +3,7 @@ require 'rails_helper.rb'
 describe User, :type => :model do
     
     before :each do
-        @user = User.new(name: "Example User", email: "user@example.com")
+        @user = User.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar")
         @valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
                          first.last@foo.jp alice+bob@baz.cn]
         @invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
@@ -61,6 +61,17 @@ describe User, :type => :model do
         @user.save
         expect(@user.email).to eq(mixed_case_email.downcase)
     end
-
+    
+    describe "passwords should follow the following rules" do
+        it "should not be blank" do
+            @user.password = @user.password_confirmation = " " * 6
+            expect(@user).to_not be_valid
+        end
+        
+        it "should have a minimum length" do
+            @user.password = @user.password_confirmation = "a" * 5
+            expect(@user).to_not be_valid
+        end
+    end
     
 end
