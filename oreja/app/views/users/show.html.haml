@@ -1,0 +1,9 @@
+- provide(:title, @user.name)
+%h1
+  = gravatar_for @user
+  %strong Name: 
+  = @user.name
+%p 
+  E-mail:
+  = @user.email
+
