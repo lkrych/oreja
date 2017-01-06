@@ -1,6 +1,6 @@
 require 'rails_helper.rb'
 
-RSpec.feature "Sign up", :type => :feature do
+RSpec.describe "Sign up", :type => :feature do
     
     before :each do
         @user_count = User.all.count
