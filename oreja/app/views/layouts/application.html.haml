@@ -10,6 +10,8 @@
   
     - if flash[:success]
       #notice.message= flash[:success]
+    - if flash[:danger]
+      #notice.message= flash[:danger]
       
     = yield
 
