@@ -1,7 +1,11 @@
 require 'rails_helper'
-
+require 'test_helper'
 
 RSpec.describe "Test Sessions", :type => :request do
+  
+  before :each do
+    @user = FactoryGirl.create(:user)
+  end
 
   it "test login" do
     get login_path
@@ -19,5 +23,17 @@ RSpec.describe "Test Sessions", :type => :request do
       expect(flash[:danger]).to be_present
       get signup_path
       expect(flash[:danger]).to_not be_present
+  end
+  
+  it 'handles a valid login' do
+    post login_path, params: { session: { email: @user.email, password: "foobar" } }
+    expect(is_logged_in?).to eq(true)
+  end
+  
+  it 'correctly handles a log out' do
+    post login_path, params: { session: { email: @user.email, password: "foobar" } }
+    expect(is_logged_in?).to eq(true)
+    delete logout_path
+    expect(is_logged_in?).to eq(false)
   end
 end
