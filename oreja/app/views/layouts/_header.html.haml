@@ -1,11 +1,11 @@
 %body
   %header.navbar.navbar-fixed-top.navbar-inverse
     .container
-      //= link_to "sample app", root_path, id: "logo" WHEN YOU HAVE A LOGO
+      = link_to "Oreja", users_path, id: "logo" 
       %nav
         %ul.nav.navbar-nav.navbar-right
-          %li= link_to "Podcasts", podcasts_path
           %li= link_to "Providers", providers_path
+          %li= link_to "Podcasts", podcasts_path
           - if logged_in?
             %li= link_to "Users", '#'
             %li.dropdown

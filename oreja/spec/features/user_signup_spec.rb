@@ -8,7 +8,7 @@ RSpec.describe "Sign up", :type => :feature do
     
     scenario "User submits invalid signup information" do
         visit "/signup"
-    
+        
         fill_in "user_name", :with => ""
         fill_in "user_email", :with => "user@invalid"
         fill_in "user_password", :with => "foo"
