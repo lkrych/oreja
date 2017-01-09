@@ -1,4 +1,5 @@
 require 'rails_helper.rb'
+require 'test_helper'
 
 RSpec.describe "Log in",  :type => :feature do
     
@@ -18,7 +19,7 @@ RSpec.describe "Log in",  :type => :feature do
         
     end
     
-    scenario "login with valid information" do
+    scenario "log out" do
         
         visit '/login'
         fill_in :Email, :with => @user.email
@@ -31,5 +32,6 @@ RSpec.describe "Log in",  :type => :feature do
         expect(page).to have_text("Sign up now!")
         
     end
+    
   
 end

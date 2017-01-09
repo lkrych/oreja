@@ -36,4 +36,17 @@ RSpec.describe "Test Sessions", :type => :request do
     delete logout_path
     expect(is_logged_in?).to eq(false)
   end
+  
+  scenario "test login with remembering" do
+    log_in_as_integration(@user, remember_me: '1')
+    expect(cookies['remember_token']).to_not be_empty
+  end
+    
+  scenario "test login without remembering" do
+    #log in to set the cookie and then log in and verify that the cookie is deleted
+    log_in_as_integration(@user, remember_me: '1')
+    binding.pry
+    log_in_as_integration(@user, remember_me: '0')
+    expect(cookies['remember_token']).to be_empty
+  end
 end

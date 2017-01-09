@@ -1,4 +1,5 @@
 require 'rails_helper.rb'
+require 'test_helper'
 
 describe User, :type => :model do
     
@@ -73,5 +74,10 @@ describe User, :type => :model do
             expect(@user).to_not be_valid
         end
     end
+    
+    it "should return false for a user with a nil remember_digest" do
+        expect(@user.authenticated?('')).to eq(false)
+    end
+    
     
 end
