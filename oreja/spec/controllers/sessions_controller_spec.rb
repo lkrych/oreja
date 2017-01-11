@@ -45,7 +45,6 @@ RSpec.describe "Test Sessions", :type => :request do
   scenario "test login without remembering" do
     #log in to set the cookie and then log in and verify that the cookie is deleted
     log_in_as_integration(@user, remember_me: '1')
-    binding.pry
     log_in_as_integration(@user, remember_me: '0')
     expect(cookies['remember_token']).to be_empty
   end
