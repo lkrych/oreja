@@ -1,7 +1,9 @@
 %body
   %header.navbar.navbar-fixed-top.navbar-inverse
     .container
-      = link_to "Oreja", users_path, id: "logo" 
+      = link_to("Oreja", user_path(current_user), id: "Logo") if !current_user.nil?
+      = link_to("Oreja", login_path, id: "Logo") if current_user.nil?
+
       %nav
         %ul.nav.navbar-nav.navbar-right
           %li= link_to "Providers", providers_path
